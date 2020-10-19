@@ -1,5 +1,8 @@
-<%- include("partials/header") -%> 
+<%- include("partials/header") -%>
 <h1>HELLO</h1>
 <p><%= homeContent  %> </p>
-<%- include("partials/footer") -%> 
-<h1><%= poste %> </h1>
+<% for (var i=0; i < poste.length; i++) {  %>
+<h1><%= poste[i].titleInput %> </h1>
+<p><%= poste[i].bodyInput %> </p>
+<% } %>
+<%- include("partials/footer") -%>
