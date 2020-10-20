@@ -16,11 +16,11 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/", (req, res)=> {
-  res.render("home", {homeContent: homeStartingContent, poste: posts});
-  var title = posts[posts.length-1].titleInput
-  var body = posts[posts.length-1].bodyInput
-  console.log(body + title)
-});
+  res.render("home", {
+    homeContent: homeStartingContent, 
+    poste: posts
+  });
+  });
 
 app.get("/about", (req, res)=> {
   res.render("about", {aboutContent: aboutContent});

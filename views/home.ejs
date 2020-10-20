@@ -1,8 +1,8 @@
 <%- include("partials/header") -%>
 <h1>HELLO</h1>
 <p><%= homeContent  %> </p>
-<% for (var i=0; i < poste.length; i++) {  %>
-<h1><%= poste[i].titleInput %> </h1>
-<p><%= poste[i].bodyInput %> </p>
-<% } %>
+<% poste.forEach( (post)=> { %>
+<h1><%= post.titleInput %> </h1>
+<p><%= post.bodyInput %> </p>
+<% }) %> 
 <%- include("partials/footer") -%>
