@@ -1,8 +1,8 @@
 <%- include("partials/header") -%>
 <h1>HELLO</h1>
 <p><%= homeContent  %> </p>
-<% poste.forEach( (post)=> { %>
-<h1><%= post.titleInput %> </h1>
-<p><%= post.bodyInput %> </p>
-<% }) %> 
+<% poste.forEach((post)=> { %>
+<h1><%= post.title %> </h1>
+<p><%= post.text.substring(0, 100) + "... " %> <a href="/post/<%= post.title %>" >Read More</a> </p>
+<% }) %>
 <%- include("partials/footer") -%>
